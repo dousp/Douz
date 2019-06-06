@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.dsp</groupId>
+        <artifactId>douz-starter-all</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <!--<groupId>com.dsp</groupId>-->
+    <artifactId>douz-rate-limit-guava-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>douz-rate-limit-guava-starter</name>
+    <description>douz-rate-limit-guava-starter</description>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dsp</groupId>
+            <artifactId>douz-rate-limit-guava-autoconfigure</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--<plugin>-->
+            <!--    <artifactId>maven-jar-plugin</artifactId>-->
+            <!--    <version>3.1.2</version>-->
+            <!--    <executions>-->
+            <!--        <execution>-->
+            <!--            <id>default-jar</id>-->
+            <!--            <phase>package</phase>-->
+            <!--            <goals>-->
+            <!--                <goal>jar</goal>-->
+            <!--                &lt;!&ndash;<goal>test-jar</goal>&ndash;&gt;-->
+            <!--            </goals>-->
+            <!--            <configuration>-->
+            <!--                <classifier>bak</classifier>-->
+            <!--            </configuration>-->
+            <!--        </execution>-->
+            <!--    </executions>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+
+</project>

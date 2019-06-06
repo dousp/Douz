@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "douz.limit",
+      "type": "com.dsp.douz.rate.limit.guava.conf.LimitProperties",
+      "sourceType": "com.dsp.douz.rate.limit.guava.conf.LimitProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "douz.limit.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用",
+      "sourceType": "com.dsp.douz.rate.limit.guava.conf.LimitProperties"
+    },
+    {
+      "name": "douz.limit.exception-ignore",
+      "type": "java.lang.Boolean",
+      "description": "限流异常后是否继续执行方法",
+      "sourceType": "com.dsp.douz.rate.limit.guava.conf.LimitProperties"
+    },
+    {
+      "name": "douz.limit.key-prefix",
+      "type": "java.lang.String",
+      "description": "配置key前缀",
+      "sourceType": "com.dsp.douz.rate.limit.guava.conf.LimitProperties",
+      "defaultValue": "douz_limit"
+    },
+    {
+      "name": "douz.limit.type",
+      "type": "java.lang.String",
+      "description": "限流类型",
+      "sourceType": "com.dsp.douz.rate.limit.guava.conf.LimitProperties"
+    }
+  ],
+  "hints": []
+}
