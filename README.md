@@ -29,4 +29,5 @@ douz.limit.enabled = true
 ## TODO
 
 - maven依赖调整
-- @RateLimitGuava的type尚未完善
+- 项目版本
+- 配置项douz.limit.type尚未完善
