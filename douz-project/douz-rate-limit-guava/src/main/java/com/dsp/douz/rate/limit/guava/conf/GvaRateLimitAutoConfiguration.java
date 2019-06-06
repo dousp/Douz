@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @EnableConfigurationProperties(LimitProperties.class)
-@ConditionalOnProperty(prefix = LimitConstant.DOUZ_PREFIX, value = LimitConstant.ENABLED, havingValue = "true", matchIfMissing = false)
+@ConditionalOnProperty(prefix = LimitConstant.DOUZ_PREFIX, value = LimitConstant.ENABLED, havingValue = "true")
 @Import({ GuavaLimitSelector.class })
 public class GvaRateLimitAutoConfiguration {
 

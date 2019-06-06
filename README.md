@@ -9,6 +9,7 @@
 ##  引用
 
 ```
+// 1.mvn clean install后添加依赖
 <dependency>
     <groupId>com.dsp</groupId>
     <artifactId>douz-rate-limit-guava-starter</artifactId>
@@ -16,7 +17,16 @@
 </dependency>
 ```
 
+```
+// 2.配置文件中至少：
+douz.limit.enabled = true
+```
+```
+// 3. 使用@RateLimitGuava
+```
+
 
 ## TODO
 
 - maven依赖调整
+- @RateLimitGuava的type尚未完善
