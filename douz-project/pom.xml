@@ -20,6 +20,7 @@
 
     <modules>
         <module>douz-rate-limit-guava</module>
+        <module>douz-rate-limit-redis</module>
     </modules>
 
 </project>
