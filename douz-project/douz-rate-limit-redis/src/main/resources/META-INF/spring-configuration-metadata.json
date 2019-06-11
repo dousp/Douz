@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "name": "douz.limit.redis",
+      "type": "com.dsp.douz.rate.limit.redis.conf.RedisLimitProperties",
+      "sourceType": "com.dsp.douz.rate.limit.redis.conf.RedisLimitProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "douz.limit.redis.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用",
+      "sourceType": "com.dsp.douz.rate.limit.redis.conf.RedisLimitProperties"
+    },
+    {
+      "name": "douz.limit.redis.prefix",
+      "type": "java.lang.String",
+      "description": "分布式限流key前缀",
+      "sourceType": "com.dsp.douz.rate.limit.redis.conf.RedisLimitProperties",
+      "defaultValue": "douz_rlimit"
+    }
+  ],
+  "hints": []
+}

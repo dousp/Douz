@@ -16,7 +16,7 @@ import java.io.Serializable;
 
 @Configuration
 @EnableConfigurationProperties(RedisLimitProperties.class)
-@ConditionalOnProperty(prefix = RedisLimitConstant.DOUZ_PREFIX, value = RedisLimitConstant.ENABLED, havingValue = "true")
+@ConditionalOnProperty(prefix = RedisLimitConstant.DOUZ_REDIS_LIMIT, value = RedisLimitConstant.ENABLED, havingValue = "true")
 @ConditionalOnMissingBean({RedisTemplate.class,RedisLimitAspect.class})
 public class RedisLimitConf {
 
