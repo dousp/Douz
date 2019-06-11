@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
-public @interface RateLimitGuava {
+public @interface GuavaLimit {
 
     /**
      * 资源的key

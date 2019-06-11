@@ -1,17 +1,16 @@
 package com.dsp.douz.rate.limit.guava.conf;
 
-import com.dsp.douz.rate.limit.guava.constant.LimitConstant;
+import com.dsp.douz.rate.limit.guava.constant.GuavaLimitConstant;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 /**
  * @author dd
  * @date 2019-05-27
  */
 @Configuration
-@ConfigurationProperties(LimitConstant.DOUZ_PREFIX)
-public class LimitProperties {
+@ConfigurationProperties(GuavaLimitConstant.DOUZ_PREFIX)
+public class GuavaLimitProperties {
 
     /**
      * 是否启用
@@ -20,7 +19,7 @@ public class LimitProperties {
     /**
      * 配置key前缀
      */
-    private String keyPrefix = "douz_limit";
+    private String keyPrefix = "douz_glimit";
     /**
      * 限流异常后是否继续执行方法
      */

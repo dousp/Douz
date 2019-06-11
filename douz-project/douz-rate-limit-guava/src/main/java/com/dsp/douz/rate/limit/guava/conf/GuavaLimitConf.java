@@ -1,6 +1,6 @@
 package com.dsp.douz.rate.limit.guava.conf;
 
-import com.dsp.douz.rate.limit.guava.constant.LimitConstant;
+import com.dsp.douz.rate.limit.guava.constant.GuavaLimitConstant;
 import com.dsp.douz.rate.limit.guava.selector.GuavaLimitSelector;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Import;
  * @author Dsp
  */
 @Configuration
-@EnableConfigurationProperties(LimitProperties.class)
-@ConditionalOnProperty(prefix = LimitConstant.DOUZ_PREFIX, value = LimitConstant.ENABLED, havingValue = "true")
+@EnableConfigurationProperties(GuavaLimitProperties.class)
+@ConditionalOnProperty(prefix = GuavaLimitConstant.DOUZ_PREFIX, value = GuavaLimitConstant.ENABLED, havingValue = "true")
 @Import({ GuavaLimitSelector.class })
-public class GvaRateLimitAutoConfiguration {
+public class GuavaLimitConf {
 
     // @Resource
     // private LimitProperties limitProperties;

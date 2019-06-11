@@ -1,7 +1,7 @@
 package com.dsp.douz.rate.limit.guava.service.impl;
 
 import com.dsp.douz.rate.limit.guava.core.RateLimitCache;
-import com.dsp.douz.rate.limit.guava.exception.RateLimitGuavaRuntimeException;
+import com.dsp.douz.rate.limit.guava.exception.GuavaLimitRuntimeException;
 import com.dsp.douz.rate.limit.guava.service.RateLimitExecutor;
 import com.google.common.util.concurrent.RateLimiter;
 import org.springframework.util.StringUtils;
@@ -22,7 +22,7 @@ public class RateLimitGuavaExecutor implements RateLimitExecutor {
     public boolean tryAccess(String requestKey, int limitPeriod, int limitCount,  long timeout) {
         // requestKey设置验证
         if (StringUtils.isEmpty(requestKey)) {
-            throw new RateLimitGuavaRuntimeException("Request key is empty");
+            throw new GuavaLimitRuntimeException("Request key is empty");
         }
         // 限流周期设置验证
         // if (limitPeriod != 1) {

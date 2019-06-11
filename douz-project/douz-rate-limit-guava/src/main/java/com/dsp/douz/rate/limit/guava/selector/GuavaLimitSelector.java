@@ -1,6 +1,6 @@
 package com.dsp.douz.rate.limit.guava.selector;
 
-import com.dsp.douz.rate.limit.guava.aop.RateLimitGuavaAspect;
+import com.dsp.douz.rate.limit.guava.aop.GuavaLimitAspect;
 import com.dsp.douz.rate.limit.guava.service.impl.RateLimitGuavaExecutor;
 import com.dsp.douz.rate.limit.guava.service.impl.RateLimitGuavaProxy;
 import org.slf4j.Logger;
@@ -18,8 +18,8 @@ public class GuavaLimitSelector implements DeferredImportSelector {
 
     @Override
     public String[] selectImports(AnnotationMetadata metadata) {
-        logger.info("RateLimitGuavaAspect begin import...");
-        return new String[] { RateLimitGuavaAspect.class.getName(),
+        logger.info("douz-rate-limit-guava begin import...");
+        return new String[] { GuavaLimitAspect.class.getName(),
                                         RateLimitGuavaExecutor.class.getName(),
                                         RateLimitGuavaProxy.class.getName()};
     }

@@ -1,7 +1,6 @@
 package com.dsp.douz.rate.limit.guava.aop;
 
-import com.dsp.douz.rate.limit.guava.annotation.RateLimitGuava;
-import com.dsp.douz.rate.limit.guava.exception.RateLimitGuavaRuntimeException;
+import com.dsp.douz.rate.limit.guava.annotation.GuavaLimit;
 import com.dsp.douz.rate.limit.guava.service.RateLimitProxy;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -18,14 +17,14 @@ import java.lang.reflect.Method;
  * @author dsp
  */
 @Aspect
-public class RateLimitGuavaAspect {
+public class GuavaLimitAspect {
 
-    private static final Logger logger = LoggerFactory.getLogger(RateLimitGuavaAspect.class);
+    private static final Logger logger = LoggerFactory.getLogger(GuavaLimitAspect.class);
 
     @Resource
     private RateLimitProxy rateLimitProxy;
 
-    @Pointcut(value = "execution(public * *(..)) && @annotation(com.dsp.douz.rate.limit.guava.annotation.RateLimitGuava)")
+    @Pointcut(value = "execution(public * *(..)) && @annotation(com.dsp.douz.rate.limit.guava.annotation.GuavaLimit)")
     public void rateLimitGuava(){}
 
     @Around(value = "rateLimitGuava()")
@@ -33,8 +32,8 @@ public class RateLimitGuavaAspect {
 
         MethodSignature signature = (MethodSignature) pjp.getSignature();
         Method method = signature.getMethod();
-        RateLimitGuava rateLimitGuava = method.getAnnotation(RateLimitGuava.class);
-        return rateLimitProxy.invoke(pjp,rateLimitGuava.name(), rateLimitGuava.key(), rateLimitGuava.period(), rateLimitGuava.qps(),rateLimitGuava.timeout());
+        GuavaLimit guavaLimit = method.getAnnotation(GuavaLimit.class);
+        return rateLimitProxy.invoke(pjp, guavaLimit.name(), guavaLimit.key(), guavaLimit.period(), guavaLimit.qps(), guavaLimit.timeout());
     }
 
 }
