@@ -2,14 +2,12 @@ package com.dsp.douz.rate.limit.guava.conf;
 
 import com.dsp.douz.rate.limit.guava.constant.GuavaLimitConstant;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * @author dd
+ * @author dsp
  * @date 2019-05-27
  */
-@Configuration
-@ConfigurationProperties(GuavaLimitConstant.DOUZ_PREFIX)
+@ConfigurationProperties(GuavaLimitConstant.DOUZ_LIMIT_GUAVA)
 public class GuavaLimitProperties {
 
     /**
